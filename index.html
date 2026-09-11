@@ -1,38 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#172033">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Safarpur Coordinator">
-  <link rel="manifest" href="./manifest.json">
-  <link rel="icon" href="./icon-192.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Safarpur Coordinator</title>
+
+  <meta name="theme-color" content="#111827">
+
   <style>
-    html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#f4f6fb}
-    iframe{border:0;width:100%;height:100%;display:block}
-    #fallback{position:fixed;inset:0;display:none;place-items:center;padding:24px;font-family:Arial,sans-serif;text-align:center;background:#f4f6fb;color:#172033}
-    #fallback a{display:inline-block;margin-top:14px;padding:12px 18px;border-radius:10px;background:#4f5eea;color:white;text-decoration:none}
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #ffffff;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
   </style>
 </head>
+
 <body>
-  <iframe src="https://script.google.com/macros/s/AKfycbxxpOj59qNoFJYl06E0Q_IFDWr1SC03NRCO9wBqpPMa87Icl3EPCEH2yKqFtFSlrN9v/exec?page=coordinator" allow="clipboard-read; clipboard-write"></iframe>
-  <div id="fallback">
-    <div>
-      <h2>Safarpur Coordinator</h2>
-      <p>Coordinator App load nahi ho pa rahi. Neeche tap karke app kholen.</p>
-      <a href="https://script.google.com/macros/s/AKfycbxxpOj59qNoFJYl06E0Q_IFDWr1SC03NRCO9wBqpPMa87Icl3EPCEH2yKqFtFSlrN9v/exec?page=coordinator">Open Coordinator App</a>
-    </div>
-  </div>
-  <script>
-    if ("serviceWorker" in navigator) navigator.serviceWorker.register("./sw.js").catch(()=>{});
-    setTimeout(()=>{
-      const f=document.querySelector("iframe");
-      if(!f || !f.contentWindow) document.getElementById("fallback").style.display="grid";
-    },5000);
-  </script>
+
+  <iframe
+    src="https://script.google.com/macros/s/AKfycbxxpOj59qNoFJYl06E0Q_IFDWr1SC03NRCO9wBqpPMa87Icl3EPCEH2yKqFtFSlrN9v/exec?page=coordinator"
+    allow="fullscreen">
+  </iframe>
+
 </body>
 </html>
